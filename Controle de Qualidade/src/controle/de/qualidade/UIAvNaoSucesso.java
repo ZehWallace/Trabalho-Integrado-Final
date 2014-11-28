@@ -92,7 +92,7 @@ public class UIAvNaoSucesso extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try {
             new UICMenu(c).setVisible(true);
-        } catch (SQLException ex) {
+        } catch (SQLException | ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
             Logger.getLogger(UIAvNaoSucesso.class.getName()).log(Level.SEVERE, null, ex);
         }
         this.dispose();

@@ -170,6 +170,8 @@ public class UIAvVenda extends javax.swing.JFrame {
 			new UICMenu(c).setVisible(true);
 		} catch (SQLException ex) {
 			Logger.getLogger(UIAvOficina.class.getName()).log(Level.SEVERE, null, ex);
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
+			Logger.getLogger(UIAvVenda.class.getName()).log(Level.SEVERE, null, ex);
 		}
 		this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
