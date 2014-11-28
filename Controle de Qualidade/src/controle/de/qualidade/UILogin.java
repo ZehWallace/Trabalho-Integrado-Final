@@ -34,6 +34,11 @@ public class UILogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jDialog1 = new javax.swing.JDialog();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -48,6 +53,20 @@ public class UILogin extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         warningLabel = new javax.swing.JLabel();
+
+        jDialog1.setMinimumSize(new java.awt.Dimension(430, 320));
+        jDialog1.getContentPane().setLayout(new java.awt.GridLayout(3, 0));
+        jDialog1.getContentPane().add(jPanel4);
+
+        jPanel5.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 40));
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(204, 0, 0));
+        jLabel5.setText("Erro na Conexão: Tente novamente mais tarde");
+        jPanel5.add(jLabel5);
+
+        jDialog1.getContentPane().add(jPanel5);
+        jDialog1.getContentPane().add(jPanel6);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sistema de controle de qualidade");
@@ -102,6 +121,8 @@ public class UILogin extends javax.swing.JFrame {
 			warningLabel.setText("Erro: Falha na conexão com o BD");
 			Logger.getLogger(UILogin.class.getName()).log(Level.SEVERE, null, ex);
 		}
+//        jDialog1.setLocationRelativeTo(null);
+//        jDialog1.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyPressed
@@ -155,11 +176,16 @@ public class UILogin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel warningLabel;
     // End of variables declaration//GEN-END:variables
