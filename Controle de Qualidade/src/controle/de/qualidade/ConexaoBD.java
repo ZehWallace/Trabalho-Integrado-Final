@@ -15,7 +15,7 @@ public class ConexaoBD {
 			Class.forName("org.postgresql.Driver").newInstance();
 
 			myConnection = DriverManager.getConnection("jdbc:postgresql:"
-					+ "//localhost/ControleDeQualidade?user=postgres&password=zeh");
+					+ "//localhost/ControleDeQualidade?user=postgres&password=postgres");
 
 			//Cria um comando (statement) vinculado aa conexao
 			st = myConnection.createStatement();
