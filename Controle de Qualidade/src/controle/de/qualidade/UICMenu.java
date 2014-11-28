@@ -134,6 +134,8 @@ public class UICMenu extends javax.swing.JFrame {
                 return false;
             }
         };
+        jPanel11 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
         jPanel29 = new javax.swing.JPanel();
@@ -272,6 +274,11 @@ public class UICMenu extends javax.swing.JFrame {
 
         jPanel5.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 400, 170));
 
+        jLabel3.setForeground(new java.awt.Color(255, 0, 0));
+        jPanel11.add(jLabel3);
+
+        jPanel5.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 395, 30));
+
         jTabbedPane1.addTab("Visualizar Avaliação", jPanel5);
 
         jPanel2.setLayout(new java.awt.GridLayout(5, 0));
@@ -353,7 +360,14 @@ public class UICMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-		// TODO add your handling code here:
+		int opc = jTable2.getSelectedRow();
+		if(vetorAvVendas.size()>0){
+			AvVenda av = (AvVenda) vetorAvVendas.get(opc);
+			new UIVisAvVenda(c, (AvVenda) vetorAvVendas.get(opc)).setVisible(true);
+			this.dispose();
+		}else{
+			jLabel3.setText("Nenhum item selecionado!");
+		}
     }//GEN-LAST:event_jButton2ActionPerformed
 
 	/**
@@ -372,10 +386,12 @@ public class UICMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel29;
