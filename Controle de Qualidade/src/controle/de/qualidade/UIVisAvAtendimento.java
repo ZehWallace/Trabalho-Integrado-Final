@@ -130,7 +130,7 @@ public class UIVisAvAtendimento extends javax.swing.JFrame {
         jPanel11.add(jLabel10);
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel11.setText("1 minuto");
+        jLabel11.setText("2 minuto");
         jPanel11.add(jLabel11);
 
         jPanel4.add(jPanel11);
