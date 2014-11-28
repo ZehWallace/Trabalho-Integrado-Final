@@ -9,12 +9,12 @@ package controle.de.qualidade;
  *
  * @author davys_000
  */
-public class UIVisAvOficina extends javax.swing.JFrame {
+public class UIVisAvAtendimento extends javax.swing.JFrame {
 
     /**
-     * Creates new form UIVisAvOficina
+     * Creates new form UIVisAvAtendimento
      */
-    public UIVisAvOficina() {
+    public UIVisAvAtendimento() {
         initComponents();
     }
 
@@ -33,6 +33,9 @@ public class UIVisAvOficina extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jPanel3 = new javax.swing.JPanel();
+        jPanel12 = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -61,7 +64,7 @@ public class UIVisAvOficina extends javax.swing.JFrame {
         jPanel1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 10));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setText("Avaliação Oficina");
+        jLabel1.setText("Avaliação Atendimento");
         jPanel1.add(jLabel1);
 
         getContentPane().add(jPanel1);
@@ -81,16 +84,26 @@ public class UIVisAvOficina extends javax.swing.JFrame {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
         );
 
         getContentPane().add(jPanel2);
 
-        jPanel3.setLayout(new java.awt.GridLayout(2, 0));
+        jPanel3.setLayout(new java.awt.GridLayout(3, 0));
+
+        jPanel12.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 5, 6));
+
+        jLabel12.setText("Atendente:");
+        jPanel12.add(jLabel12);
+
+        jLabel13.setText("José Felisberto da Silva");
+        jPanel12.add(jLabel13);
+
+        jPanel3.add(jPanel12);
 
         jPanel6.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 5, 6));
 
-        jLabel2.setText("Data do Serviço:");
+        jLabel2.setText("Data do Atendimento:");
         jPanel6.add(jLabel2);
 
         jLabel3.setText("01/01/1849");
@@ -117,7 +130,7 @@ public class UIVisAvOficina extends javax.swing.JFrame {
         jPanel11.add(jLabel10);
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel11.setText("1 mês");
+        jLabel11.setText("1 minuto");
         jPanel11.add(jLabel11);
 
         jPanel4.add(jPanel11);
@@ -127,8 +140,8 @@ public class UIVisAvOficina extends javax.swing.JFrame {
         jPanel10.add(jLabel8);
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel9.setText("Não");
+        jLabel9.setForeground(new java.awt.Color(0, 153, 0));
+        jLabel9.setText("Sim");
         jPanel10.add(jLabel9);
 
         jPanel4.add(jPanel10);
@@ -138,8 +151,8 @@ public class UIVisAvOficina extends javax.swing.JFrame {
         jPanel9.add(jLabel6);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(204, 0, 0));
-        jLabel7.setText("4.5");
+        jLabel7.setForeground(new java.awt.Color(0, 153, 0));
+        jLabel7.setText("7.5");
         jPanel9.add(jLabel7);
 
         jPanel4.add(jPanel9);
@@ -161,7 +174,7 @@ public class UIVisAvOficina extends javax.swing.JFrame {
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
         );
 
         getContentPane().add(jPanel5);
@@ -174,11 +187,15 @@ public class UIVisAvOficina extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -190,6 +207,7 @@ public class UIVisAvOficina extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
