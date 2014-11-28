@@ -9,9 +9,7 @@ public class ConexaoBD {
 	private Statement st;
 
 	// Construtor
-	public ConexaoBD() {
-		try {
-
+	public ConexaoBD() throws ClassNotFoundException, SQLException, InstantiationException, IllegalAccessException {
 			Class.forName("org.postgresql.Driver").newInstance();
 
 			myConnection = DriverManager.getConnection("jdbc:postgresql:"
@@ -19,10 +17,6 @@ public class ConexaoBD {
 
 			//Cria um comando (statement) vinculado aa conexao
 			st = myConnection.createStatement();
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 	}
 
 	public Cliente buscaCliente(String cpf) throws SQLException {

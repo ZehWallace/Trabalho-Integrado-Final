@@ -178,13 +178,15 @@ public class UIAvVenda extends javax.swing.JFrame {
 		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
 		String data = new SimpleDateFormat("yyyy-MM-dd").format(Calendar.getInstance().getTime());
 		try {
-			avaliacao = new AvVenda(v.getCpf_cliente(), v.getCpf_funcionario(), data, v.getData_venda(), jSlider1.getValue(), jTextArea3.getText());
+			avaliacao = new AvVenda(v.getCpf_cliente(), v.getCpf_funcionario(), data, v.getData_venda(), jSlider1.getValue()/10, jTextArea3.getText());
 			new UIAvSucesso(c).setVisible(true);
 			this.dispose();
 		} catch (SQLException ex) {
 			Logger.getLogger(UIAvVenda.class.getName()).log(Level.SEVERE, null, ex);
 			new UIAvNaoSucesso(c).setVisible(true);
 			this.dispose();
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
+			Logger.getLogger(UIAvVenda.class.getName()).log(Level.SEVERE, null, ex);
 		}
 
     }//GEN-LAST:event_jButton1ActionPerformed

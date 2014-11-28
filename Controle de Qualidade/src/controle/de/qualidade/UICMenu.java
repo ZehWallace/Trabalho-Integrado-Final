@@ -24,7 +24,7 @@ public class UICMenu extends javax.swing.JFrame {
 	 * @param tempc
 	 * @throws java.sql.SQLException
 	 */
-	public UICMenu(Cliente tempc) throws SQLException {
+	public UICMenu(Cliente tempc) throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException {
 		this.vetorVendasNaoAvaliadas = new Vector();
 		this.vetorAvVendas = new Vector();
 		String temp;

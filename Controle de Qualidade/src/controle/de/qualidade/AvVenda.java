@@ -26,7 +26,7 @@ public class AvVenda extends Avaliacao {
 		this.cpf_vendedor = cpf_vendedor;
 	}
 
-	public AvVenda(String cpfC, String cpfF, String data, String dataVenda, float nota, String sugestao) throws SQLException {
+	public AvVenda(String cpfC, String cpfF, String data, String dataVenda, float nota, String sugestao) throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException {
 		this.setCpf_cliente(cpfC);
 		this.cpf_vendedor = cpfF;
 		this.setData(data);
@@ -50,7 +50,7 @@ public class AvVenda extends Avaliacao {
 		this.venda = v;
 	}
 
-	public void adicionarAvVenda() throws SQLException {
+	public void adicionarAvVenda() throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException {
 		ConexaoBD con;
 		con = new ConexaoBD();
 		this.setCod_av(String.format("%05d", con.gerarCodigoAvVenda()));

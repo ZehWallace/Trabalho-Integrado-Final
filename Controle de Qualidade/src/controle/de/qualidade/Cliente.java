@@ -17,7 +17,7 @@ public class Cliente {
 	private String cpf;
 	private String nome;
 
-	public boolean buscarCliente(String cpf) throws SQLException {
+	public boolean buscarCliente(String cpf) throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException {
 		ConexaoBD con;
 		Cliente tempc;
 		con = new ConexaoBD();
@@ -31,14 +31,14 @@ public class Cliente {
 		return false;
 	}
 
-	public Vector obterVendas() throws SQLException {
+	public Vector obterVendas() throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException {
 		Vector vetorVendas;
 		ConexaoBD con = new ConexaoBD();
 		vetorVendas = con.buscaTodasVendasNaoAvaliadas(this.cpf);
 		return vetorVendas;
 	}
 
-	public Vector obterAvVendas() throws SQLException {
+	public Vector obterAvVendas() throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException {
 		Vector vetorAvVendas;
 		ConexaoBD con = new ConexaoBD();
 		vetorAvVendas = con.buscaTodasAvVendas(this.cpf);

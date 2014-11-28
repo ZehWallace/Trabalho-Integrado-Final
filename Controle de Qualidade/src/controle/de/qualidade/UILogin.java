@@ -120,7 +120,12 @@ public class UILogin extends javax.swing.JFrame {
 		} catch (SQLException ex) {
 			warningLabel.setText("Erro: Falha na conexão com o BD");
 			Logger.getLogger(UILogin.class.getName()).log(Level.SEVERE, null, ex);
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
+			Logger.getLogger(UILogin.class.getName()).log(Level.SEVERE, null, ex);
 		}
+//        jDialog1.setLocationRelativeTo(null);
+//        jDialog1.setVisible(true);
+		
 //        jDialog1.setLocationRelativeTo(null);
 //        jDialog1.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -134,12 +139,14 @@ public class UILogin extends javax.swing.JFrame {
             } catch (SQLException ex) {
                 warningLabel.setText("Erro: Falha na conexão com o BD");
                 Logger.getLogger(UILogin.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            } catch (ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
+				Logger.getLogger(UILogin.class.getName()).log(Level.SEVERE, null, ex);
+			}
         }
     }//GEN-LAST:event_jTextField1KeyPressed
 
 
-	private void login() throws SQLException {
+	private void login() throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException {
 		Cliente c;
 		Funcionario f;
 		String cpf;

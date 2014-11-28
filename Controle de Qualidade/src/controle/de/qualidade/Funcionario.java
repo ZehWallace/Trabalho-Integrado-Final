@@ -15,7 +15,7 @@ public class Funcionario {
     private String cpf;
     private String nome;
     
-    public boolean buscarFuncionario(String cpf) throws SQLException{
+    public boolean buscarFuncionario(String cpf) throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException{
 		ConexaoBD con = new ConexaoBD();
 		Funcionario temp;
 		temp = con.buscaFuncionario(cpf);
