@@ -18,6 +18,14 @@ public class AvVenda extends Avaliacao {
 	private String data_venda;
 	private String cpf_vendedor;
 	private Venda venda;
+
+	public Venda getVenda() {
+		return venda;
+	}
+
+	public void setVenda(Venda venda) {
+		this.venda = venda;
+	}
 	public String getCpf_vendedor() {
 		return cpf_vendedor;
 	}

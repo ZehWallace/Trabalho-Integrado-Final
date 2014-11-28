@@ -5,17 +5,39 @@
  */
 package controle.de.qualidade;
 
+import java.awt.Color;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Bruno
  */
 public class UIVisAvVenda extends javax.swing.JFrame {
+	private final AvVenda av;
+	private final Cliente c;
 
 	/**
 	 * Creates new form UIVisAvVenda
+	 * @param c
+	 * @param av
 	 */
-	public UIVisAvVenda() {
+	public UIVisAvVenda(Cliente c, AvVenda av) {
 		initComponents();
+		this.c = c;
+		this.av = av;
+		jLabel9.setText(av.getVenda().getNome_func());
+		jLabel3.setText(av.getData_venda());
+		jLabel5.setText(av.getData());
+		jLabel7.setText(""+av.getNota());
+		if(av.getNota()<5){
+			jLabel7.setForeground(Color.red);
+		}
+		jTextArea1.setEditable(false);
+		jTextArea2.setEditable(false);
+		jTextArea1.setText(av.getVenda().getDescr_venda());
+		jTextArea2.setText(av.getSugestao());
 	}
 
 	/**
@@ -152,6 +174,11 @@ public class UIVisAvVenda extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton1.setText("Voltar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel8.add(jButton1);
 
         getContentPane().add(jPanel8);
@@ -159,6 +186,15 @@ public class UIVisAvVenda extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(416, 434));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+		try {
+			new UICMenu(c).setVisible(true);
+			this.dispose();
+		} catch (SQLException | ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
+			Logger.getLogger(UIVisAvVenda.class.getName()).log(Level.SEVERE, null, ex);
+		}
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
