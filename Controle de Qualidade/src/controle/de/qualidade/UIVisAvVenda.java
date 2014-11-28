@@ -15,11 +15,13 @@ import java.util.logging.Logger;
  * @author Bruno
  */
 public class UIVisAvVenda extends javax.swing.JFrame {
+
 	private final AvVenda av;
 	private final Cliente c;
 
 	/**
 	 * Creates new form UIVisAvVenda
+	 *
 	 * @param c
 	 * @param av
 	 */
@@ -30,8 +32,8 @@ public class UIVisAvVenda extends javax.swing.JFrame {
 		jLabel9.setText(av.getVenda().getNome_func());
 		jLabel3.setText(av.getData_venda());
 		jLabel5.setText(av.getData());
-		jLabel7.setText(""+av.getNota());
-		if(av.getNota()<5){
+		jLabel7.setText("" + av.getNota());
+		if (av.getNota() < 5) {
 			jLabel7.setForeground(Color.red);
 		}
 		jTextArea1.setEditable(false);
@@ -73,7 +75,7 @@ public class UIVisAvVenda extends javax.swing.JFrame {
         jPanel8 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Visualizar Avaliação Venda");
         getContentPane().setLayout(new java.awt.GridLayout(6, 0));
 
@@ -188,12 +190,7 @@ public class UIVisAvVenda extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-		try {
-			new UICMenu(c).setVisible(true);
-			this.dispose();
-		} catch (SQLException | ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
-			Logger.getLogger(UIVisAvVenda.class.getName()).log(Level.SEVERE, null, ex);
-		}
+		this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
 

@@ -364,7 +364,6 @@ public class UICMenu extends javax.swing.JFrame {
 		if(vetorAvVendas.size()>0){
 			AvVenda av = (AvVenda) vetorAvVendas.get(opc);
 			new UIVisAvVenda(c, (AvVenda) vetorAvVendas.get(opc)).setVisible(true);
-			this.dispose();
 		}else{
 			jLabel3.setText("Nenhum item selecionado!");
 		}
