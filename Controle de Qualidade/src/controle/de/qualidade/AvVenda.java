@@ -2,6 +2,8 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
+    COMENTARIO
+
  */
 package controle.de.qualidade;
 
@@ -18,6 +20,7 @@ public class AvVenda extends Avaliacao {
 	private String data_venda;
 	private String cpf_vendedor;
 	private Venda venda;
+        private int o;
 
 	public Venda getVenda() {
 		return venda;
